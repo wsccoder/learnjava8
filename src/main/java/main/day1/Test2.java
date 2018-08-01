@@ -23,10 +23,23 @@ public class Test2 {
         System.out.println(names);
     }
 
+    public void test2(){
+        Collections.sort(names, (String a, String b)->{
+            return a.compareTo(b);
+        });
+        System.out.println(names);
+    }
 
+    public void test3(){
+        Collections.sort(names, (String a, String b) -> a.compareTo(b));
+        System.out.println(names);
+    }
 
     public static void main(String args[]){
         Test2 test2 = new Test2();
-        test2.test1();
+//        test2.test1();
+//        test2.test2();
+        test2.test3();
     }
+
 }
